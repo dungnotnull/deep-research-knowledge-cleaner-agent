@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*.class
+venv/
+.venv/
+env/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# DRKC Specific
+raw-corpus/
+outputs/
+logs/
+*.log
+model_weights/
+chroma_data/
+
+# OS/IDE
+.DS_Store
+.vscode/
+.idea/

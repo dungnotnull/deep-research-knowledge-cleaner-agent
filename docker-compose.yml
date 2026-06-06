@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./raw-corpus:/app/raw-corpus
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    depends_on:
+      - crawler
+      - chroma
+
+  crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile.crawler
+    ports:
+      - '8000:8000'
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./raw-corpus:/app/raw-corpus
+      - ./logs:/app/logs
+
+  ml-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.ml-worker
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./raw-corpus:/app/raw-corpus
+    depends_on:
+      - crawler
+
+  chroma:
+    image: chromadb/chroma
+    ports:
+      - '8001:8000'
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      - ALLOW_RESET_PASSWORD=TRUE
+
+volumes:
+  chroma_data:

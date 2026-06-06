@@ -1,0 +1,24 @@
+{
+  "name": "deep-research-knowledge-cleaner",
+  "version": "0.1.0",
+  "description": "DRKC Autonomous Research Agent",
+  "scripts": {
+    "start": "nest start",
+    "build": "nest build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "zod": "^3.22.0",
+    "langgraph": "latest"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}

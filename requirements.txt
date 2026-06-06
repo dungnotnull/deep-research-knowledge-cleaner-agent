@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+crawl4ai
+pydantic
+requests
+sentence-transformers
