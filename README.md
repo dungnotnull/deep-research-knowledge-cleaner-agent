@@ -1,17 +1,17 @@
-# ?? deep-research-knowledge-cleaner (DRKC)
+# deep-research-knowledge-cleaner (DRKC)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: NestJS](https://img.shields.io/badge/Platform-NestJS-red.svg)](https://nestjs.com/)
-[![ML: BGE-M3](https://img.shields.io/badge/ML-BGE--M3-blue.svg)](https://huggingface.co/BAAI/bge-m3)
-[![Crawl: crawl4ai](https://img.shields.io/badge/Crawl-crawl4ai-green.svg)](https://github.com/unclecode/crawl4ai)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Platform: NestJS](https://img.shields.io/badge/Platform-NestJS-red.svg)
+![ML: BGE-M3](https://img.shields.io/badge/ML-BGE--M3-blue.svg)
+![Crawl: crawl4ai](https://img.shields.io/badge/Crawl-crawl4ai-green.svg)
 
 **DRKC** is an advanced autonomous research agent system designed to combat the "AI Slop" crisis. It autonomously crawls, filters, and distills the internet's vast information into a high-density, authoritative knowledge base, culminating in a professional research report.
 
 ---
 
-## ?? Key Features
+## Key Features
 
-### ?? Precision Research Pipeline
+### Precision Research Pipeline
 - **Agentic Orchestration**: Powered by **LangGraph**, the system moves through a deterministic state machine: Topic Expansion $\rightarrow$ Deep Crawl $\rightarrow$ Quality Filtering $\rightarrow$ Semantic Reranking $\rightarrow$ Synthesis.
 - **AI Slop Detection**: A custom heuristic engine that detects low-information-density content, filler-phrase patterns, and synthetic structures to ensure only human-grade, authoritative data enters the system.
 - **Composite Reranking**: Uses a Cross-Encoder approach to score documents based on:
@@ -19,11 +19,11 @@
   - **Authority Score** (Citations, GitHub stars, Domain reputation)
   - **Freshness** (Exponential decay with an 18-month half-life)
 
-### ?? The Second Knowledge Brain
+### The Second Knowledge Brain
 - **Cumulative Intelligence**: Unlike standard RAG, DRKC maintains a persistent, append-only SECOND-KNOWLEDGE-BRAIN.md.
 - **Durable Learnings**: After every session, the agent extracts topic-agnostic principles and updates the brain, ensuring the agent becomes smarter with every research task.
 
-### ??? High-Performance Tech Stack
+### High-Performance Tech Stack
 - **Orchestrator**: NestJS (TypeScript)
 - **Crawler**: crawl4ai (Python/FastAPI) - Specialized in LLM-friendly Markdown extraction.
 - **Embeddings**: BGE-M3 (Local, Multi-lingual, 8k context).
@@ -32,7 +32,7 @@
 
 ---
 
-## ?? Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -66,7 +66,7 @@
 
 ---
 
-## ?? System Architecture
+## System Architecture
 
 \\\mermaid
 graph TD
@@ -85,7 +85,7 @@ graph TD
 
 ---
 
-## ?? Project Structure
+## Project Structure
 
 - \src/agents/\: Topic expansion and agentic logic.
 - \src/crawlers/\: crawl4ai integration and target management.
@@ -98,5 +98,5 @@ graph TD
 
 ---
 
-## ?? License
+## License
 Distributed under the MIT License. See \LICENSE\ for more information.
